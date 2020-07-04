@@ -21,7 +21,7 @@ This code is also compiled with Webpack 4.43.0.
 # Instalation for Mac/Linux
 * git clone `https://github.com/adepane/random-question-javascript.git`
 * cd random-question-javascript
-* npm Install
+* npm install
 
 # For development mode :
 * npm run start-dev 
