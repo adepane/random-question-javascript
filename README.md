@@ -1,4 +1,4 @@
-# Quesionare Multiple Choice Vanilla JavaScript Example
+# Multiple Choice Survey Questions Vanilla JavaScript Example
 
 This is just implementing the logic of random question, random answer, with
 same point for the question answer. 
