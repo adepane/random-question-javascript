@@ -19,7 +19,7 @@ class AppContent extends HTMLElement {
             const shuffle = randAnswer(question.answer);
             shuffle.forEach((ans, keys) => {
                 answerQuestion += `
-                <li class="list-group-item">${pointAns[keys]}. <a  class="answer text-info" href="#" id-question="${question.id_question}" id-pocket="${ans.pocket}">${ans.theAnswer}</a>
+                <li class=""><a  class="answer text-info list-group-item" href="#" id-question="${question.id_question}" id-pocket="${ans.pocket}">${pointAns[keys]}. ${ans.theAnswer}</a>
                 </li>
             `
             });
@@ -27,7 +27,10 @@ class AppContent extends HTMLElement {
         }
 
         this.innerHTML = `
-        <div class="card" style="width:50%;">
+        <style>
+            li { list-style:none;margin-bottom:5px}
+        </style>
+        <div class="card" style="width:100%;">
             <div class="card-body">
                 <h5 class="card-title">${this._questions[0].question}</h5>
                 <ul class="list-group list-group-flush">

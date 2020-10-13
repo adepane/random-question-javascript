@@ -1,6 +1,6 @@
 import question from './data'
 
-const apiPostResult = "http://localhost/process.php";
+const apiPostResult = "/api/sendata";
 const redirectUrl = "https://google.com";
 
 export { apiPostResult, redirectUrl, question }

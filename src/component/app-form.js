@@ -9,15 +9,15 @@ class FormBiodata extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <div class="card" style="width:50%;">
-        <div class="card-body">
+      <div class="card" style="width:100%;">
+        <div class="card-body" id="biodata">
           <div class="form-group">
-            <label for="nama">Full name</label>
-            <input type="text" class="form-control" id="fullname"  placeholder="Input Full Name" required>
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" class="form-control" id="fullname"  placeholder="isikan nama lengkap anda" required>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Input Email" required>
+            <label for="email">Umur</label>
+            <input type="text" class="form-control" id="text" placeholder="isikan usia anda" required>
           </div>
           <button type="button" class="btn btn-primary" id="sendBiodata">Submit</button>
         </div>
@@ -51,7 +51,7 @@ class FormBiodata extends HTMLElement {
     btnSend.addEventListener("click", (event) => {
       event.preventDefault();
       const getForm = document.querySelector("#biodata");
-      const getEmail = document.querySelector('#email').value;
+      // const getEmail = document.querySelector('#email').value;
       let biodata = [];
       let error = 0;
 
@@ -66,12 +66,12 @@ class FormBiodata extends HTMLElement {
           error = 0;
         }
       }
-      if (!validateEmail(getEmail)) {
-        error = 1;
-        alert("Email Not Valid");
-      } else {
-        error = 0;
-      }
+      // if (!validateEmail(getEmail)) {
+      //   error = 1;
+      //   alert("Email Not Valid");
+      // } else {
+      //   error = 0;
+      // }
       if (error == 0) {
         sendData(this._answer, biodata);
       }
